@@ -10,21 +10,30 @@ public class Practice_If1 {
 		
 		for(int i=1; i <10 ; i++) {
 			System.out.println(dan + "*" + i + "=" + (dan*i));
-		}*/
+		}
+		*/
+		
+		//키보드로 입력 받은 하나의 정수가 양수이면 "양수다", 양수가 아니면 "양수가 아니다"를 출력하세요
+		
+		/*Scanner sc = new Scanner(System.in);
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		
+		String result = (num > 0) ? "양수" : "양수가 아님";
+		System.out.println(result);
+		*/
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("정수1 : ");
-		int num1 = sc.nextInt();
-		System.out.print("정수2 : ");
-		int num2 = sc.nextInt();
-		System.out.print("입력 : ");
-		int i = sc.nextInt();
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		String result = "";
 		
-		boolean result = (i <= num1) && (num2 < i);
+		if (num > 0) {
+			result = "양수";
+		}else {
+			result = "양수가 아님";
+		}
 		System.out.println(result);
-		
-		
-		
 	}
 
 }
