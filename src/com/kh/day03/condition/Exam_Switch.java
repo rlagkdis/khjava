@@ -21,19 +21,19 @@ public class Exam_Switch {
 		System.out.println("메뉴 번호를 입력하세요 : ");
 		int choice = sc.nextInt();
 		switch (choice) {
-		case 1:
+		  case 1:
                System.out.println("입력메뉴입니다.");
                break;
-		case 2:
+		  case 2:
                System.out.println("수정메뉴입니다.");
                break;
-		case 3:
+		  case 3:
               System.out.println("조회메뉴입니다.");
               break;
-		case 4:
+		  case 4:
               System.out.println("삭제메뉴입니다.");
               break;
-		case 0:
+		  case 0:
               System.out.println("종료되었습니다.");
               break;
           default : System.out.println("0 ~ 4 사이의 숫자를 입력해주세요.");

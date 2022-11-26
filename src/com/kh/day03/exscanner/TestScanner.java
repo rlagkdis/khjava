@@ -14,9 +14,9 @@ public class TestScanner {
 	    System.out.println("성별을 입력해주세요.");
 	    char gender = sc.next().charAt(0);
 	    System.out.println("주소를 입력해주세요.");
-	    sc.nextLine();           //엔터 제거 , nextLine()은 엔터를 입력받음! 공백,띄어쓰기 입력받음(메시지,주소 받을때 nextLine씀)
+	    sc.nextLine();           //엔터 제거 , nextLine()은 엔터를 입력받음! 
+	                             //공백,띄어쓰기 입력받음(메시지,주소 받을때 nextLine씀)
 	    String address = sc.nextLine();       
-
 	    
 	    System.out.println("이름은 " + name + "입니다.");
 	    System.out.println("태어난 월은 " + month + "입니다.");

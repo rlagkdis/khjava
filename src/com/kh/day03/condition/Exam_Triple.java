@@ -9,8 +9,6 @@ public class Exam_Triple {
 		 * (조건식) ? 참일 때 : 거짓일 때
 		 * - 조건식은 반드시 true or false를 반환
 		 * - 비교/논리연산자 주로 사용
-		 * 
-		 * 
 		 */
 		//(num1 > num2) ? "참" : "거짓";
 		
