@@ -34,6 +34,7 @@ public class Practice_If1 {
 			result = "¾ç¼ö°¡ ¾Æ´Ô";
 		}
 		System.out.println(result);
+	
 	}
 
 }
