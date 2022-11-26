@@ -3,8 +3,9 @@ package com.kh.practice.condition;
 import java.util.Scanner;
 
 public class Practice_If1 {
-	public static void main (String [] args) {
-		/*Scanner sc = new Scanner(System.in);
+	public static void main(String [] args) {
+		/*
+		Scanner sc = new Scanner(System.in);
 		System.out.print("출력하고 싶은 단수 입력 : ");
 		int dan = sc.nextInt();
 		
@@ -13,7 +14,8 @@ public class Practice_If1 {
 		}
 		*/
 		
-		//키보드로 입력 받은 하나의 정수가 양수이면 "양수다", 양수가 아니면 "양수가 아니다"를 출력하세요
+		//키보드로 입력 받은 하나의 정수가 양수이면 "양수다", 
+		//양수가 아니면 "양수가 아니다"를 출력하세요
 		
 		/*Scanner sc = new Scanner(System.in);
 		System.out.print("정수 : ");
@@ -34,7 +36,6 @@ public class Practice_If1 {
 			result = "양수가 아님";
 		}
 		System.out.println(result);
-	
 	}
 
 }
