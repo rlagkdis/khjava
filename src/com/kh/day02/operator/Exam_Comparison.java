@@ -17,11 +17,11 @@ public class Exam_Comparison {
     	System.out.println("(num1 == num2)의 결과 : " + result);
     	result = (num1 != num2);
     	System.out.println("(num1 != num2)의 결과 : " + result);
-    	
+    
     	// 짝홀 판별 프로그램
     	// 짝수란 무엇인가?
     	int num = 2;
-    	result = (num % 2 == 1);    // /(나누기)의 결과는 몫, %(모듈러스)의 결과는 나머지
+    	result = (num % 2 == 0);    // /(나누기)의 결과는 몫, %(모듈러스)의 결과는 나머지
     	System.out.println("짝수인가요? : " +result);
     	
 

@@ -37,5 +37,4 @@ public class Practice_If1 {
 		}
 		System.out.println(result);
 	}
-
 }

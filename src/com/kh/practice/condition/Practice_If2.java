@@ -22,13 +22,13 @@ public class Practice_If2 {
 		System.out.print("ÀÔ·Â : ");
 		int input = sc.nextInt();
 		                                                      
-		if (input >= num1 || num2 < input ) {      
+		if (num1 >= input || num2 < input ) {      
 			System.out.println("true");            
 		}else {                                    
 			System.out.println("false");
 		}
 		
-		
+	
 	}
 	
 
