@@ -27,7 +27,7 @@ public class Exercise_Calculator {
 		char operator = sc.next().charAt(0);
 		int result = 0;
 		
-		if (operator == '+') {
+		if (operator == '+') {                      //¹®ÀÚ´Â ''
 			result = num1+num2;                          // µ¡¼À ¿¬»ê ¼öÇà
 		}else if (operator == '-') {
 			result = num1-num2;                           // »¬¼À ¿¬»ê ¼öÇà
