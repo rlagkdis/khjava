@@ -98,11 +98,23 @@ public class Exercise_Array {
 		for(int i = 0; i < origin.length; i++) {
 			System.out.print(origin[i]);
 		}// 원본 출력 
-		
-		
 	}
 	
+	//forEach문1
+	public void exercise6() {
+		int [] nums = {1, 2, 3, 4, 5};       //할당과 초기화 동시에
+		for(int num : nums) {
+			System.out.print(num + " ");
+		}
+	}
 	
+	public void exercise7() {
+		String [] fruits = {"딸기","복숭아","포도","체리", "망고"};
+
+		for(String fruit : fruits) {         //(fruits 가 아닌다른변수명 : fruits)
+			System.out.print(fruit + " ");
+		}
+	}
 	
 
 }
