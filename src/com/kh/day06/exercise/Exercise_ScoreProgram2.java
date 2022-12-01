@@ -9,7 +9,7 @@ public class Exercise_ScoreProgram2 {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		while(true) {
-			printMenu();
+			printMenu();    
 			int choice = sc.nextInt();
 			switch(choice) {
 			  case 1 : 

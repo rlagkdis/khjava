@@ -19,7 +19,6 @@ public class Exercise_ScoreProgarm {
 			System.out.println("3. 종료");
 			System.out.print("선택 : ");
 			int choice = sc.nextInt();
-			int i = 0;
 			switch (choice) {
 			case 1 : 
 				System.out.println("======성적 입력======");
