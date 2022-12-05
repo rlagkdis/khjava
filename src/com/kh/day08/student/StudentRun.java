@@ -14,7 +14,7 @@ public class StudentRun {
 				sFunc.printScore();
 				break;
 			case 3 : 
-				sFunc.checkPass();
+				sFunc.printGoodBye();
 				break;
 			case 4 : break EXIT;
 			default : break;

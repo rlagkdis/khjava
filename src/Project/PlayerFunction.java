@@ -57,7 +57,7 @@ public class PlayerFunction {
 				}
 			}
 		}
-	
+	//아직 득점왕이 여러명일때 이름 다같이 나오게하는건 못함..
 	public void goldenB() {
 		int max = 0;
 		String maxn = "";

@@ -84,7 +84,20 @@ public class StudentFunction {
 		
 	}
 	
-	public void printGoodBye() {}
+	public void printGoodBye() {
+//		for(int i = 0; i < students.length-1; i++) {
+//			for(int j = 0; j < (students.length-1)-i; j++) {
+//				if(students[j].getFirstScore() > students[j+1].getFirstScore()) {
+//					int temp = students[j+1].getFirstScore();
+//					students[j+1].setFirstScore(students[j].getFirstScore());
+//					students[j].setFirstScore(temp);
+//				}
+//			}
+//		}
+//		for(int i = 0; i < students.length; i++) {
+//			System.out.print(students[i].getFirstScore());
+	}
+
 	
 	public void printExceoption() {}
 	
