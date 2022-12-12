@@ -27,15 +27,32 @@ public class BaseballClient {
 			dis = new DataInputStream(is);
 			dos = new DataOutputStream(os);
 			System.out.println("게임 준비 완료");
-			
-			// 값 보내기
-			System.out.print("--> ");
-			String input = sc.nextLine();
-			dos.writeUTF(input);
-		} catch (UnknownHostException e) {
+			while(true) {
+				// 값 보내기
+				System.out.print("--> ");
+				String input = sc.nextLine();
+				dos.writeUTF(input);
+				// 결과값 받기
+				String resultMsg = dis.readUTF();
+				System.out.println(resultMsg);
+				if(resultMsg.startsWith("3")) {
+					System.out.println("축하합니다. 아웃입니다!");
+					break;
+				}
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+		} finally {
+			try {
+				dos.close();
+				dis.close();
+				is.close();
+				os.close();
+				socket.close();
+				sc.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
