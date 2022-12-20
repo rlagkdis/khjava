@@ -37,6 +37,19 @@ public class MusicController {
 		mList.set(index, music);
 	}
 	/**
+	 * 이름으로 음악 목록 검색
+	 * @param title
+	 */
+	public List<Music> searchMusicsByName(String title) {
+		List<Music> findList = new ArrayList<Music>();
+		for(Music mOne: mList) {
+			if(mOne.getTitle().equals(title)) {
+				findList.add(mOne);
+			}
+		} 
+		return findList;
+	}
+	/**
 	 * 이름으로 인덱스 조회
 	 * @param musicName
 	 * @return
@@ -65,6 +78,72 @@ public class MusicController {
 	 */
 	public List<Music> printMusicList() {
 		return mList;
+	}
+	
+	public void sortByTitleAsc() {
+		// 정렬하기
+//		int [] nums = {4,3,2,1};
+		for(int i = 1; i < mList.size(); i++) {
+			for(int e = 0; e <i; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				if(mOne.getTitle().compareTo(mTwo.getTitle())< 1) {
+					Music temp = mOne;
+					mList.set(i, mTwo);
+					mList.set(e, temp);
+				}
+//				if(mOne.getTitle() < mTwo.getTitle()) {}  //스트링은 대소비교 불가
+//				if(nums[i] > nums[i+1]) {
+//					int temp = nums[i+1];
+//					nums[i+1] = nums[i];
+//					nums[i] = temp;
+//				}
+			}
+		}
+	}
+	
+	public void sortByTitleDesc() {
+		for(int i = 0; i < mList.size(); i++) {
+			for(int e = 0; e <i; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				if(mOne.getTitle().compareTo(mTwo.getTitle())> 1) {
+					Music temp = mOne;
+					mList.set(i,mTwo);
+					mList.set(e, temp);
+				}
+	}
+	}
+	}
+	
+	public void sortBySingerAsc() {
+		for(int i = 1; i < mList.size(); i++) {
+			for(int e = 0; e < i; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				if(mOne.getTitle().compareTo(mTwo.getTitle()) < 1) {
+					Music temp = mOne;
+					mList.set(i, mTwo);
+					mList.set(e, temp);
+				}
+			}
+		}
+		
+	}
+	
+	public void sortBySingerDesc() {
+		for(int i = 1; i < mList.size(); i++) {
+			for(int e = 0; e < i; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				if(mOne.getSinger().compareTo(mTwo.getSinger()) > 1) {
+					Music temp = mOne;
+					mList.set(i, mTwo);
+					mList.set(e, temp);
+				}
+			}
+		}
+		
 	}
 
 }

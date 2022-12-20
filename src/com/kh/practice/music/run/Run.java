@@ -20,40 +20,72 @@ public class Run {
 			case 1 : 
 				music = view.inputMusicInfo("마지막");
 				mCon.addAtLast(music);
+				view.displaySuccess("추가 성공!");
 				break;
 			case 2 : 
 				music = view.inputMusicInfo("첫");
 				mCon.addAtZero(music);
+				view.displaySuccess("추가 성공!");
 				break;
 			case 3 : 
 				List<Music> allList = mCon.printMusicList();
 				view.showAllMusicList(allList);
+				view.displaySuccess("조회 성공!");
 				break;
 			case 4 :
 				title = view.inputMusicName("검색");
-				index = mCon.searchOneByName(title);
-				music = mCon.selectOneByIndex(index);
-				view.showOneMusic(music);
+				List<Music> findList = mCon.searchMusicsByName(title);
+				view.showAllMusicList(findList);
+				view.displaySuccess("조회 성공!");
+//				index = mCon.searchOneByName(title);
+//				music = mCon.selectOneByIndex(index);
+//				view.showOneMusic(music);
 				break;
 			case 5 : 
 				title = view.inputMusicName("삭제");
 				index = mCon.searchOneByName(title);
+				if(index == -1) {
+					view.displayError("존재하지 않습니다.");
+					break;
+				}
 				mCon.removeMusic(index);
+				view.displaySuccess("삭제 성공!");
 				break;
 			case 6 : 
 				// 이름 받기
 				title = view.inputMusicName("수정");
 				// 이름으로 인덱스 검색, 존재 여부 체크용
 				index = mCon.searchOneByName(title);
-				// 가져온 데이터 수정
+				if(index == -1) {
+					view.displayError("조회 실패!");
+					break;
+				}
+				// 가져온 데이터1 수정
 				music = view.modifyMusicInfo();
 				// 저장소에 수정하기
 				mCon.updateMusic(index,music);
 				break;
-			case 7 : break;
-			case 8 : break;
-			case 9 : break;
-			case 10 : break;
+			case 7 : 
+				//System.out.println("=== === 곡명 오름차순 정렬 === ===");
+				view.printMessage("=== === 곡명 오름차순 정렬 === ===");
+				mCon.sortByTitleAsc();
+				view.printMessage("정렬 성공! 3번을 눌러 출력해주세요.");
+				break;
+			case 8 : 
+				view.printMessage("=== === 곡명 내림차순 정렬 === ===");
+				mCon.sortByTitleDesc();
+				view.printMessage("정렬 성공! 3번을 눌러 출력해주세요.");
+				break;
+			case 9 : 
+				view.printMessage("=== === 가수명 오름차순 정렬 === ===");
+				mCon.sortBySingerAsc();
+				view.printMessage("정렬 성공! 3번을 눌러 출력해주세요.");
+				break;
+			case 10 : 
+				view.printMessage("=== === 가수명 내림차순 정렬 === ===");
+				mCon.sortBySingerDesc();
+				view.printMessage("정렬 성공! 3번을 눌러 출력해주세요.");
+				break;
 			}
 		}while(select != 0);
 	
